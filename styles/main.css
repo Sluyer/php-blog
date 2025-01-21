@@ -1,0 +1,84 @@
+.site-header {
+    background-color: #e6e3e3;
+    padding: 25px 0;
+    border-bottom: 3px solid #13c145;
+}
+
+.site-header .container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-header h1 {
+    font-size:30px;
+    color: #262424;
+    margin: 0;
+    font-family: cursive;
+}
+
+.site-header .logo {
+    width: 50px;
+    height: auto;
+    margin-left: -930px;
+}
+
+.site-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px;
+}
+
+.site-header nav ul li a {
+    text-decoration: none;
+    color: #13c145;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    font-family: cursive;
+}
+
+.site-header nav ul li a:hover {
+    color: #0a6424;
+}
+
+/* DERNIERS ITEMS MIT EN VENTE */
+
+.last-items {
+    margin: 20px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.last-items ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.last-items li {
+    margin-bottom: 10px;
+    padding: 5px;
+    border-bottom: 1px solid #eee;
+}
+
+.last-items li:last-child {
+    border-bottom: none;
+}
+
+.last-items a {
+    text-decoration: none;
+    color: #0073e6;
+    font-weight: bold;
+}
+
+.last-items a:hover {
+    text-decoration: underline;
+    color: #005bb5;
+}

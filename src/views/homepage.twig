@@ -1,0 +1,22 @@
+{% extends 'base.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block content %}
+    <h2>Bienvenue sur NookZone</h2>
+    <p>Échangez vos objets dans Animal Crossing: New Horizons avec d'autres joueurs.</p>
+
+    <h3>Derniers objets mis en vente</h3>
+    <ul>
+        {% for item in lastItems %}
+            <li>
+                <a href="/items/{{ item.id }}">{{ item.name }}</a>
+                - {{ item.price }} clochettes
+                <br>
+                <small>Mise en vente le {{ item.date_added }}</small>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="/items" class="btn">Voir les objets disponibles</a>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.twig' %}
+
+{% block title %}{{ item.name }}{% endblock %}
+
+{% block content %}
+    <h2>{{ item.name }}</h2>
+    <p>Description : {{ item.description }}</p>
+    <h3>Vendeurs</h3>
+    <ul>
+        {% for seller in sellers %}
+            <li>
+                {{ seller.name }} - {{ seller.price }} clochettes
+                {% if seller.contact %}
+                    <a href="mailto:{{ seller.contact }}">Contacter</a>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+    <a href="/items" class="btn">Retour à la liste</a>
+{% endblock %}
