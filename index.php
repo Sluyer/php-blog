@@ -33,6 +33,8 @@ if ($path === '/') {
     require_once('./src/controllers/item.php');
 } elseif ($path === '/login') {
     echo $twig->render('auth/login.twig', ['title' => 'Connexion']);
+} elseif ($path === '/register') {
+    echo $twig->render('auth/register.twig', ['title' => 'Inscription']);
 } else {
     echo $twig->render('404.twig', ['title' => 'Page introuvable']);
 }

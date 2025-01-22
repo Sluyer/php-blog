@@ -1,0 +1,46 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+  Inscription
+{% endblock %}
+
+{% block content %}
+  <div class="container d-flex justify-content-center text-center p-4">
+    <form action="/register" method="POST" class="login-form">
+        <div class="login-logo-wrap">
+            <h1 class="login-title">Inscription</h1>
+            <img src="/assets/logo.png" alt="Logo" class="logoconnexion">
+        </div>
+        <div class="form-group">
+            <label for="username">Nom d'utilisateur</label>
+            <input type="text" id="username" name="username" placeholder="Nom d'utilisateur" required>
+        </div>
+
+        <div class="form-group">
+            <label for="password">Mot de passe</label>
+            <input type="password" id="password" name="password" placeholder="Mot de passe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="confirm-password">Confirmez le mot de passe</label>
+            <input type="password" id="confirm-password" name="confirm_password" placeholder="Confirmez votre mot de passe" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Adresse mail</label>
+            <input type="email" id="email" name="email" placeholder="Entrez votre adresse mail" required>
+        </div>
+
+        <div class="form-group">
+            <label for="friend-code">Code ami (12 chiffres)</label>
+            <input type="text" id="friend-code" name="friend_code" placeholder="1234-5678-9012" pattern="\d{4}-\d{4}-\d{4}" required>
+        </div>
+
+        <button type="submit" class="btn-login">Créer un compte</button>
+
+        <p class="signup-text">
+            Déjà inscrit ? <a href="/login" class="signup-link">Connectez-vous</a>
+        </p>
+    </form>
+  </div>
+{% endblock %}

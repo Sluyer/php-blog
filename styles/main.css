@@ -305,3 +305,53 @@ html {
 .signup-link:hover {
   text-decoration: underline;
 }
+
+/*INSCRIPTION*/
+
+.auth-form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.auth-form .form-group {
+    margin-bottom: 15px;
+}
+
+.auth-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.auth-form .btn-submit {
+    display: inline-block;
+    background-color: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.auth-form .btn-submit:hover {
+    background-color: #005bb5;
+}
+
+.auth-form p {
+    margin-top: 10px;
+    text-align: center;
+}
+
