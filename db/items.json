@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "Pomme",
+    "image": "assets/pomme.jpg"
+  },
+  {
+    "id": 1337,
+    "name": "Raymond",
+    "image": "assets/raymond.jpg"
+  }
+]

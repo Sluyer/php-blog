@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "listingId": 1,
+        "userId": 1,
+        "status": "pending"
+    },
+    {
+        "id": "67909f372cd2e",
+        "listingId": 1337,
+        "userId": 42,
+        "status": "pending"
+    },
+    {
+        "id": "67909f4fbfb7f",
+        "listingId": 1337,
+        "userId": 42,
+        "status": "pending"
+    },
+    {
+        "id": "67909f7023b3b",
+        "listingId": 1337,
+        "userId": 42,
+        "status": "pending"
+    },
+    {
+        "id": "6790a42bb2fc3",
+        "listingId": 1337,
+        "userId": 42,
+        "status": "pending"
+    }
+]

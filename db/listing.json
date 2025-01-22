@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "quantity": 1,
+    "price": 3500000,
+    "itemId": 1337,
+    "sellerId": 1
+  }
+]
