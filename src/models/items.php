@@ -18,7 +18,7 @@ class Items
     public function getOne($selectedId)
     {
         $found = array_filter($this->items, function ($item) use ($selectedId) {
-            return $item['id'] === $selectedId;
+            return $item['id'] == $selectedId; //Attention aux == et aux === /!\
         });
 
         return array_values($found); 

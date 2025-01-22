@@ -8,6 +8,9 @@ $twig = new \Twig\Environment($loader);
 
 $path = $_SERVER['REQUEST_URI'];
 
+
+$path = parse_url($path, PHP_URL_PATH);
+
 if ($path === '/') {
     require_once('./src/controllers/homepage.php');
 } elseif ($path === '/items') {
@@ -26,6 +29,8 @@ if ($path === '/') {
         ['name' => 'Tom', 'price' => 1250, 'contact' => null],
     ];
     echo $twig->render('items/detail.twig', ['item' => $item, 'sellers' => $sellers]);
+} elseif ($path === '/item') {
+    require_once('./src/controllers/item.php');
 } elseif ($path === '/login') {
     echo $twig->render('auth/login.twig', ['title' => 'Connexion']);
 } else {
