@@ -5,8 +5,10 @@
 {% endblock %}
 
 {% block content %}
-  <h1>{{ item.name }}</h1>
-  <p>{{ item.description }}</p>
-  <img src="/assets/items/{{ item.image }}" alt="{{ item.name }}" />
-  <p>Price: {{ item.price }}</p>
+    <div class="text-center w-[50%] border border-success-subtle p-4">
+        <h1 class="title ms-2">{{ item.name }}</h1>
+        <p class="ms-3">{{ item.description }}</p>
+        <img class="" src="/assets/items/{{ item.image }}" alt="{{ item.name }}" />
+        <p>Price: {{ item.price }}</p>
+    <div>
 {% endblock %}
