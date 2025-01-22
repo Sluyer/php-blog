@@ -28,5 +28,11 @@
         "listingId": 1337,
         "userId": 42,
         "status": "pending"
+    },
+    {
+        "id": "6790a944597a8",
+        "listingId": 1337,
+        "userId": 42,
+        "status": "pending"
     }
 ]

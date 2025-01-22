@@ -1,12 +1,12 @@
 [
   {
     "id": 1,
-    "name": "Pomme",
-    "image": "assets/pomme.jpg"
+    "name": "Chaise Rococo",
+    "image": "assets/items/chaise_rococo.jpg"
   },
   {
     "id": 1337,
     "name": "Raymond",
-    "image": "assets/raymond.jpg"
+    "image": "assets/items/raymond.jpg"
   }
 ]

@@ -1,22 +1,24 @@
 {% extends 'base.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}
+  Accueil
+{% endblock %}
 
 {% block content %}
-    <h2>Bienvenue sur NookZone</h2>
-    <p>Échangez vos objets dans Animal Crossing: New Horizons avec d'autres joueurs.</p>
+  <h3>Objets en tendance</h3>
 
-    <h3>Derniers objets mis en vente</h3>
-    <ul>
-        {% for item in lastItems %}
-            <li>
-                <a href="/items/{{ item.id }}">{{ item.name }}</a>
-                - {{ item.price }} clochettes
-                <br>
-                <small>Mise en vente le {{ item.date_added }}</small>
-            </li>
-        {% endfor %}
-    </ul>
+  <div class="d-flex justify-content-center gap-2">
+    {% for item in items %}
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">{{ item.name }}</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
 
-    <a href="/items" class="btn">Voir les objets disponibles</a>
+  <a href="/items" class="btn">Voir les objets disponibles</a>
 {% endblock %}
