@@ -10,5 +10,13 @@
                 <li><a href="/about">À propos</a></li>
             </ul>
         </nav>
+        <div class="compte">
+            <img src="/images/logocompte2.png" alt="Compte" class="compte-icon">
+            {% if isConnected %}
+                <span>{{ username }}</span>
+            {% else %}
+                <span>Se connecter</span>
+            {% endif %}
+        </div>
     </div>
 </header>
