@@ -1,12 +1,20 @@
 [
   {
-    "id": 1,
+    "id": 2,
     "name": "Chaise Rococo",
-    "image": "assets/items/chaise_rococo.jpg"
+    "description": "Cette chaise est vraiment très belle",
+    "image": "chaise_rococo.png"
   },
   {
     "id": 1337,
     "name": "Raymond",
-    "image": "assets/items/raymond.jpg"
+    "description": "Chat",
+    "image": "raymond.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Marina",
+    "description": "Juste la goat en fait",
+    "image": "marina.webp"
   }
 ]
