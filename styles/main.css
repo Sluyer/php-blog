@@ -160,10 +160,11 @@ html {
 
 /* LOGO CONNEXION*/
 .compte {
-  display: flex;
-  align-items: center;
-  margin-left: -700px;
-  width: 200px;
+    display: flex;
+    align-items: center;
+    margin-left: 700px;
+    width: 200px;
+
 }
 
 .compte span,
