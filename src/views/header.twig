@@ -1,22 +1,36 @@
-<header class="site-header">
-    <div class="container">
-  
-      <h1>NookZone</h1>
-      <img src="/images/logo.png" alt="Logo NookZone" class="logo">
-        <nav>
-            <ul>
-                <li><a href="/">Accueil</a></li>
-                <li><a href="/items">Objets</a></li>
-                <li><a href="/about">À propos</a></li>
-            </ul>
-        </nav>
-        <div class="compte">
-            <img src="/images/logocompte2.png" alt="Compte" class="compte-icon">
-            {% if isConnected %}
-                <span>{{ username }}</span>
-            {% else %}
-                <span>Se connecter</span>
-            {% endif %}
-        </div>
+<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="#">
+      <img width="50px" src="/assets/logo.png" alt="" />
+      NookaZone
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Accueil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Tous les items</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">À propos</a>
+        </li>
+        {# <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Dropdown link</a>
+          <ul class="dropdown-menu">
+            <li>
+              <a class="dropdown-item" href="#">Action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Another action</a>
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </li> #}
+      </ul>
     </div>
-</header>
+  </div>
+</nav>
