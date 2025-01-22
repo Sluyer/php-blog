@@ -158,36 +158,27 @@ html {
   color: #0a6424;
 }
 
-/* LOGO CONNEXION*/
-.compte {
-    display: flex;
-    align-items: center;
-    margin-left: 700px;
-    width: 200px;
-
-}
-
-.compte span,
-.compte-link {
-  font-size: 20px;
-
-  color: #13c145;
-  font-weight: bold;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: block;
-  max-width: 100%;
-}
-
-.compte-link {
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.compte-link:hover {
-  color: #0a6424;
-}
+/* BTN "Se connecter" */
+.btn-login-nav {
+    background-color: #13c145;
+    color: white; 
+    border: none; 
+    padding: 8px 20px; 
+    font-size: 12px; 
+    font-weight: bold;
+    border-radius: 4px; 
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Animation au survol */
+  }
+  
+  .btn-login-nav:hover {
+    background-color: #0a6424; 
+    transform: scale(1.05); 
+    color: #fff;
+  }
+  
+  .btn-login-nav:active {
+    transform: scale(0.95); 
+  }
 
 /* DERNIERS ITEMS MIT EN VENTE */
 
