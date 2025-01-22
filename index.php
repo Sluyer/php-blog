@@ -19,10 +19,17 @@ if ($path === '/') {
         ['id' => 105, 'name' => 'Tapis rayé', 'price' => 900, 'date_added' => '2025-01-17'],
     ];
 
+    //simule la connexion
+    $isConnected = true; //true simule connecté
+    $username = $isConnected ? 'Louis' : null;
+
     echo $twig->render('homepage.twig', [
         'title' => 'Accueil',
+        'isConnected' => $isConnected,
+        'username' => $username,
         'lastItems' => $lastItems
     ]);
+
 } elseif ($path === '/items') {
     //exemple objets fictifs
     $items = [

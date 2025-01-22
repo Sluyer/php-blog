@@ -5,7 +5,7 @@
 }
 
 .site-header .container {
-    max-width: 1400px;
+    max-width: 1800px;
     margin: 0 auto;
     padding: 0 50px;
     display: flex;
@@ -23,7 +23,7 @@
 .site-header .logo {
     width: 50px;
     height: auto;
-    margin-left: -930px;
+    margin-left: -730px;
 }
 
 .site-header nav ul {
@@ -44,6 +44,26 @@
 
 .site-header nav ul li a:hover {
     color: #0a6424;
+}
+
+/* LOGO CONNEXION*/
+.compte {
+    display: flex;
+    align-items: center;
+    margin-left: -700px;
+    width: 200px;
+}
+
+.compte span {
+    font-size: 20px;
+    font-family: cursive;
+    color: #13c145; 
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    max-width: 100%; 
 }
 
 /* DERNIERS ITEMS MIT EN VENTE */
