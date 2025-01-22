@@ -26,6 +26,9 @@ if ($path === '/') {
         ['name' => 'Tom', 'price' => 1250, 'contact' => null],
     ];
     echo $twig->render('items/detail.twig', ['item' => $item, 'sellers' => $sellers]);
+} elseif ($path === '/item' && isset($queryParams['id'])) {
+    $itemId = $queryParams['id'];
+    require_once('./src/controllers/item.php');
 } else {
     echo $twig->render('404.twig', ['title' => 'Page introuvable']);
 }
