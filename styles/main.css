@@ -170,7 +170,8 @@ html{
     width: 200px;
 }
 
-.compte span {
+.compte span,
+.compte-link {
     font-size: 20px;
     font-family: cursive;
     color: #13c145; 
@@ -180,6 +181,15 @@ html{
     text-overflow: ellipsis;
     display: block;
     max-width: 100%; 
+}
+
+.compte-link {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.compte-link:hover {
+    color: #0a6424;
 }
 
 /* DERNIERS ITEMS MIT EN VENTE */
@@ -218,3 +228,86 @@ html{
   text-decoration: underline;
   color: #005bb5;
 }
+
+/*LOGIN*/
+
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    background-color: #f9f9f9;
+}
+
+.login-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.login-logo-wrap {
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    gap: 10px; 
+    margin-bottom: 0px;
+}
+
+.logoconnexion {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
+.login-form {
+    width: 350px;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: cursive;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.btn-login {
+    background-color: #13c145;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-login:hover {
+    background-color: #0a6424;
+}
+
+.signup-text {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.signup-link {
+    color: #13c145;
+    text-decoration: none;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+

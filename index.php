@@ -26,6 +26,8 @@ if ($path === '/') {
         ['name' => 'Tom', 'price' => 1250, 'contact' => null],
     ];
     echo $twig->render('items/detail.twig', ['item' => $item, 'sellers' => $sellers]);
+} elseif ($path === '/login') {
+    echo $twig->render('auth/login.twig', ['title' => 'Connexion']);
 } else {
     echo $twig->render('404.twig', ['title' => 'Page introuvable']);
 }
