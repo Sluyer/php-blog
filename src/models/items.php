@@ -43,4 +43,16 @@ class Items
 
         return array_values($found);
     }
+    public function search($query)
+    {
+        /** @var array $found 
+         * @var array $item
+         */
+        $query = strtolower($query);
+        $found = array_filter($this->items, function ($item) use ($query) {
+            return strpos(strtolower($item['name']), $query) !== false;
+        });
+
+        return array_values($found);
+    }
 }

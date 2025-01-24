@@ -28,6 +28,9 @@ switch ($path) {
     case '/register':
         echo $twig->render('auth/register.twig');
         break;
+    case '/search':
+        require_once('./src/controllers/search.php');
+        break;
     default:
         echo $twig->render('404.twig');
         break;
