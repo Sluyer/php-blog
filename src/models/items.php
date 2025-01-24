@@ -1,9 +1,20 @@
 <?php
 
+declare(strict_types=1);
+
+
+class ItemType
+{
+    public string $id;
+    public string $name;
+    public string $description;
+    public string $image;
+}
+
 class Items
 {
-    /** @var array $items */
-    private $items;
+    /** @var array<ItemType> $items */
+    public $items;
 
     public function __construct()
     {
@@ -12,7 +23,7 @@ class Items
         $this->items = json_decode(file_get_contents($pathname), true);
     }
 
-    public function getAll()
+    public function getAll(): array|ItemType
     {
         return $this->items;
     }
@@ -25,11 +36,11 @@ class Items
     {
         /** @var array $found 
          * @var array $item
-        */
+         */
         $found = array_filter($this->items, function ($item) use ($selectedId) {
             return $item['id'] == $selectedId; //Attention aux == et aux === /!\
         });
 
-        return array_values($found); 
+        return array_values($found);
     }
 }

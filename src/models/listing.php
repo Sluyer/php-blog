@@ -1,5 +1,13 @@
 <?php
 
+require_once('./src/models/users.php');
+
+class ListingResponse
+{
+    public  int $price;
+    public  string $sellerName;
+    public int $sellerId;
+}
 
 class Listing
 {
@@ -20,13 +28,15 @@ class Listing
      */
     public function getListingOfItem($itemId)
     {
-        /** @var array $found 
-         * @var array $item
-        */
-        $found = array_filter($this->listing, function ($item) use ($itemId) {
-            return $item['itemId'] == $itemId;
-        });
-
-        return array_values($found);
+        $listing = [];
+        $userModel = new Users();
+        foreach ($this->listing as $item) {
+            if ($item['itemId'] == $itemId) {
+                $user = $userModel->getUser($item['sellerId']);
+                $item['sellerName'] = $user[0]['name'];
+                $listing[] = $item;
+            }
+        }
+        return $listing;
     }
 }

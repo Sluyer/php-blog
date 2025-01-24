@@ -2,7 +2,7 @@
   <div class="container-fluid">
     <a class="navbar-brand fw-semibold d-flex align-items-center gap-2" href="/">
       <img width="50px" src="/assets/logo.png" alt="" />
-      NookaZon
+      Nookazon
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -14,20 +14,24 @@
           <a class="nav-link" href="/items">Tous les items</a>
         </li>
         <li class="nav-item">
+          <a class="nav-link" href="/buy">Mes achats</a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link" href="/about">À propos</a>
         </li>
       </ul>
       <form class="d-flex" role="search" method="GET" action="/search?q={{ query }}">
-        <input class="form-control me-2" type="search" placeholder="Recherche.." aria-label="Search" name="query">
-        <button class="btn btn-outline-success" type="submit">
-        <i class="fa fa-search"></i></button>
+        <input class="form-control me-2" type="search" placeholder="Recherche.." aria-label="Search" name="query" />
+        <button class="btn btn-outline-success" type="submit"><i class="fa fa-search"></i></button>
       </form>
       <div class="d-flex align-items-center">
-        <img src="/assets/logocompte2.png" alt="User Icon" width="30" height="30" class="rounded-circle me-2">
         {% if isConnected %}
           <span class="fw-bold me-3">{{ username }}</span>
         {% else %}
-          <a href="/login" class="btn-login-nav">Se connecter</a>
+          <a href="/login" class="ms-3 btn-login-nav text-decoration-none">
+            <i class="fa fa-user"></i>
+            Connexion
+          </a>
         {% endif %}
       </div>
     </div>
