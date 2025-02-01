@@ -2,11 +2,13 @@
   {
     "id": 1,
     "name": "John Doe",
-    "email": "john@doe;com"
+    "email": "john@doe.com",
+    "password": "password"
   },
   {
     "id": 2,
     "name": "Jane Doe",
-    "email": "jane@doe;com"
+    "email": "jane@doe.com",
+    "password": "password"
   }
 ]

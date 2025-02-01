@@ -23,7 +23,7 @@ switch ($path) {
         require_once('./src/controllers/about.php');
         break;
     case '/login':
-        echo $twig->render('auth/login.twig');
+        require_once('./src/controllers/login.php');
         break;
     case '/register':
         echo $twig->render('auth/register.twig');
