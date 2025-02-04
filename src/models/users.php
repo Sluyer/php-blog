@@ -33,35 +33,39 @@ class Users
     }
 
     public function login(string $email, string $password): void
-    {
-        if (session_status() == PHP_SESSION_NONE) {
-            session_start();
-        };
-        if (isset($_SESSION['user'])) {
-            return;
-        }
-
-
-        if (!$email || !$password) {
-            return;
-        }
-
-        $found = array_filter($this->users, function ($user) use ($email, $password) {
-            return $user['email'] == $email && $user['password'] == $password;
-        });
-
-        $user = array_values($found);
-
-        if (empty($user)) {
-            header('Location: /login');
-            return;
-        }
-
-        // Check password 
-        if (password_verify($password, $user[0]['password'])) {
-            return;
-        } else {
-            return;
-        }
+{
+    if (session_status() == PHP_SESSION_NONE) {
+        session_start();
     }
+    
+    if (isset($_SESSION['user'])) {
+        header('Location: /');
+        exit();
+    }
+
+    if (!$email || !$password) {
+        header('Location: /login?error=missing-fields');
+        exit();
+    }
+
+    $found = array_filter($this->users, function ($user) use ($email) {
+        return $user['email'] === $email;
+    });
+
+    $user = array_values($found);
+
+    if (empty($user)) {
+        header('Location: /login?error=no-user');
+        exit();
+    }
+
+    if (password_verify($password, $user[0]['password'])) {
+        $_SESSION['user'] = $user[0];
+        header('Location: /');
+        exit();
+    }
+    
+    header('Location: /login?error=invalid-password');
+    exit();
+}
 }

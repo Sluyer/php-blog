@@ -10,5 +10,11 @@
     "name": "Jane Doe",
     "email": "jane@doe.com",
     "password": "password"
+  },
+  {
+    "id": 3,
+    "name": "Alice",
+    "email": "corentin.glm@icloud.com",
+    "password": "$2y$10$rzBqNzVUZjGCsvbSCwCNUuyul0TvxoQO2nMEkc.bgWVxBXMUJkcda"
   }
 ]
