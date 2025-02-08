@@ -39,4 +39,38 @@ class Listing
         }
         return $listing;
     }
+
+    private function removeListing($listingId)
+    {
+        $newListing = [];
+        foreach ($this->listing as $item) {
+            if ($item['id'] != $listingId) {
+                $newListing[] = $item;
+            }
+        }
+        $this->listing = $newListing;
+        $pathname = __DIR__ . '/../../db/listing.json';
+        file_put_contents($pathname, json_encode($this->listing));
+    }
+
+    public function buyItem($listingId)
+    {
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
+
+        if (!isset($_SESSION['user'])) {
+            header('Location: /login');
+            exit();
+        }
+
+        $user = $_SESSION['user'];
+        $foundListing = array_filter($this->listing, function ($item) use ($listingId) {
+            return $item['id'] == $listingId;
+        });
+        // remove listing 
+        $this->removeListing($listingId);
+
+        return $foundListing;
+    }
 }

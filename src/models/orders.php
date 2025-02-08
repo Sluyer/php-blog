@@ -29,6 +29,7 @@ class Orders
 
         array_push($this->orders, $order);
         $this->save();
+        return $order;
     }
 
     private function save()
