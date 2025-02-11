@@ -1,34 +1,39 @@
 <?php
 
+require_once 'vendor/autoload.php';
 
-// Router Php
+//config twig
+$loader = new \Twig\Loader\FilesystemLoader('./src/views');
+$twig = new \Twig\Environment($loader);
 
+$path = $_SERVER['REQUEST_URI'];
+$path = parse_url($path, PHP_URL_PATH);
 
-class Router
-{
-
-    private $routes = array(
-        '/' => 'homepage',
-        '/about' => 'about',
-    );
-
-    public function __construct()
-    {
-        $this->route();
-    }
-
-    public function route()
-    {
-        require_once('./src/views/header/header.php');
-        $path = $_SERVER['REQUEST_URI'];
-        if (array_key_exists($path, $this->routes)) {
-            $controller = $this->routes[$path];
-   
-            require_once('./src/controllers/' . $controller . '.php');
-        } else {
-            require_once('./src/controllers/404.php');
-        }
-    }
+require_once('./src/controllers/nav.php');
+switch ($path) {
+    case '/':
+        require_once('./src/controllers/homepage.php');
+        break;
+    case '/item':
+        require_once('./src/controllers/item.php');
+        break;
+    case '/buy':
+        require_once('./src/controllers/buy.php');
+        break;
+    case '/about':
+        require_once('./src/controllers/about.php');
+        break;
+    case '/login':
+        require_once('./src/controllers/login.php');
+        break;
+    case '/register':
+        echo $twig->render('auth/register.twig');
+        break;
+    case '/search':
+        require_once('./src/controllers/search.php');
+        break;
+    case '/logout':
+    default:
+        echo $twig->render('404.twig');
+        break;
 }
-
-$router = new Router();

@@ -1,0 +1,25 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+  Accueil
+{% endblock %}
+
+{% block content %}
+  <h1>Résultat de la recherche pour "{{query}}"</h1>
+
+    <div class="row">
+        {% for item in items %}
+        <div class="col-4">
+            <div class="card">
+                <img src="/assets/items/{{ item.image }}" class="card-img-top" alt="{{ item.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ item.name }}</h5>
+                    <p class="card-text">{{ item.description }}</p>
+           
+                    <a href="/item?id={{ item.id }}" class="btn btn-primary">Voir l'item</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

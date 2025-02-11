@@ -1,0 +1,21 @@
+[
+  {
+    "id": 2,
+    "name": "Linette",
+    "description": "Chat 2 mignon de ouf",
+    "image": "linette.webp"
+  },
+  {
+    "id": 1337,
+    "name": "Raymond",
+    "description": "Chat",
+    "image": "raymond.jpg"
+  },
+  {
+    "id": 1,
+    "name": "Marina",
+    "description": "Juste la goat en fait",
+    "image": "marina.webp"
+  }
+]
+

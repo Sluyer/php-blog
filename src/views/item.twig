@@ -1,0 +1,51 @@
+{% extends 'base.twig' %}
+
+{% block title %}
+  {{ item.name }}
+{% endblock %}
+
+{% block content %}
+  <div class="container p-4 d-flex gap-3">
+    <img class="img-fluid rounded-3 shadow-sm border-3 object-fit-contain" width="55%" src="/assets/items/{{ item.image }}" alt="{{ item.name }}" />
+    <div class="item-infos">
+      <h1 class="fs-1">{{ item.name }}</h1>
+      <p>{{ item.description }}</p>
+    </div>
+  </div>
+
+  <div class="listings">
+    <h2 class="mb-3">
+      <i class="fa fa-shop"></i>
+      Vente en cours sur cet objet
+    </h2>
+
+    <table class="table table-bordered mt-3">
+      <thead>
+        <tr>
+          <th>Vendeur</th>
+          <th>Prix</th>
+          <th>Quantité</th>
+          <th>Clochettes</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for listing in listings %}
+          <tr>
+            <td>{{ listing.sellerName }}</td>
+            <td class="d-flex align-items-center gap-2">{{ listing.price }} <img src="/assets/bells.webp" width="25px" alt="" srcset=""> </td>
+            <td>{{ listing.quantity }}</td>
+            <td>
+              {% if user != null %}
+                <a href="/buy?item={{ listing.id }}" class="btn btn-primary">Acheter</a>
+              {% else %}
+                <a href="/login" class="btn btn-primary">Se connecter pour acheter</a>
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+
+
+  
+{% endblock %}

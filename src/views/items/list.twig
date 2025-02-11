@@ -1,0 +1,15 @@
+{% extends 'base.twig' %}
+
+{% block title %}Liste des objets{% endblock %}
+
+{% block content %}
+    <h2>Liste des objets</h2>
+    <ul>
+        {% for item in items %}
+            <li>
+                <a href="/items/{{ item.id }}">{{ item.name }}</a>
+                - Prix moyen : {{ item.average_price }} clochettes
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

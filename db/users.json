@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "email": "john@doe.com",
+    "password": "password",
+    "friend-code": "1234"
+  },
+  {
+    "id": 2,
+    "name": "Jane Doe",
+    "email": "jane@doe.com",
+    "password": "password",
+    "friend-code": "1234"
+  },
+  {
+    "id": 3,
+    "name": "Corentin",
+    "email": "corentin.glm@icloud.com",
+    "password": "$2y$10$rzBqNzVUZjGCsvbSCwCNUuyul0TvxoQO2nMEkc.bgWVxBXMUJkcda",
+    "friend-code": "1234"
+  }
+]
