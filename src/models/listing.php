@@ -24,9 +24,12 @@ class Listing
 
     /**
      * @param int $itemId
+     *
      * @return array
+     *
+     * @psalm-return list{0?: mixed,...}
      */
-    public function getListingOfItem($itemId)
+    public function getListingOfItem($itemId): array
     {
         $listing = [];
         $userModel = new Users();
@@ -40,7 +43,7 @@ class Listing
         return $listing;
     }
 
-    private function removeListing($listingId)
+    private function removeListing(array|string $listingId): void
     {
         $newListing = [];
         foreach ($this->listing as $item) {
@@ -53,7 +56,7 @@ class Listing
         file_put_contents($pathname, json_encode($this->listing));
     }
 
-    public function buyItem($listingId)
+    public function buyItem(string|array $listingId): array
     {
         if (session_status() == PHP_SESSION_NONE) {
             session_start();
@@ -64,7 +67,7 @@ class Listing
             exit();
         }
 
-        $user = $_SESSION['user'];
+        $_SESSION['user'];
         $foundListing = array_filter($this->listing, function ($item) use ($listingId) {
             return $item['id'] == $listingId;
         });

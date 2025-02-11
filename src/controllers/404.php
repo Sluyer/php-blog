@@ -1,3 +1,3 @@
 <?php 
 
-require_once('./src/views/not-found.php');
+require_once('./src/views/404.twig');

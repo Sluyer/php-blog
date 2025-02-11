@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/../../index.php';
 // check session start
 if (session_status() == PHP_SESSION_NONE) {
     session_start();

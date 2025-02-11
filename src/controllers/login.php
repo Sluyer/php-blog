@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/../../index.php';
 // Check if method is POST 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     require_once('./src/models/users.php');

@@ -13,11 +13,14 @@ class Users
 
     /**
      * @param int $userId
+     *
      * @return array
+     *
+     * @psalm-return list<mixed>
      */
-    public function getUser($userId)
+    public function getUser($userId): array
     {
-        /** @var array $found 
+        /** 
          * @var array $user
          */
         $found = array_filter($this->users, function ($user) use ($userId) {
@@ -32,7 +35,10 @@ class Users
         return $user;
     }
 
-    public function login(string $email, string $password): void
+    /**
+     * @return never
+     */
+    public function login(string $email, string $password)
 {
     if (session_status() == PHP_SESSION_NONE) {
         session_start();

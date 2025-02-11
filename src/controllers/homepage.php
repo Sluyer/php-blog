@@ -1,7 +1,7 @@
 <?php
+require_once __DIR__ . '/../../index.php';
 
 
-$title = 'Blogue 🐘';
 
 
 // Get items

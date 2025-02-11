@@ -1,5 +1,5 @@
 <?php
-
+require_once __DIR__ . '/../../index.php';
 
 if (isset($_GET['item'])) {
     require_once('./src/models/listing.php');

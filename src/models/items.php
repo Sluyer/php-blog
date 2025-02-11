@@ -5,10 +5,10 @@ declare(strict_types=1);
 
 class ItemType
 {
-    public string $id;
-    public string $name;
-    public string $description;
-    public string $image;
+
+
+
+
 }
 
 class Items
@@ -23,6 +23,11 @@ class Items
         $this->items = json_decode(file_get_contents($pathname), true);
     }
 
+    /**
+     * @return ItemType[]
+     *
+     * @psalm-return array<ItemType>
+     */
     public function getAll(): array|ItemType
     {
         return $this->items;
@@ -30,9 +35,12 @@ class Items
 
     /**
      * @param int $selectedId
+     *
      * @return array
+     *
+     * @psalm-return list<mixed>
      */
-    public function getOne($selectedId)
+    public function getOne($selectedId): array
     {
         /** @var array $found 
          * @var array $item
@@ -43,7 +51,16 @@ class Items
 
         return array_values($found);
     }
-    public function search($query)
+    /**
+     * @param (array|string)[]|string $query
+     *
+     * @psalm-param array<int|string, array<int|string, mixed>|string>|string $query
+     *
+     * @return ItemType[]
+     *
+     * @psalm-return list<ItemType>
+     */
+    public function search(string|array $query): array
     {
         /** @var array $found 
          * @var array $item
